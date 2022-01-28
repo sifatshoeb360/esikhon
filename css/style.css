@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.btn1{
+    font-size: 24px;
+    background: #0f0e0c;
+    padding: 10px 16px;
+    border-radius: 50px;
+    box-shadow: -1px 0px 3px 3px #53c28b;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+/* hover  */
+/* hover  */
+.btn1:hover{
+    background: #53c28b;
+    color: black;
+    box-shadow: -1px 0px 3px 3px #031b0f;
+    transition: 0.5s;
+}
+
+
+image{
+    width: 100%;
+}
+header{
+    background: #0c673a url(../img/leftimg.svg) left bottom no-repeat;
+    height: 100vh;
+    width: 100vw;
+    padding: 2% 5%;
+    position: relative;
+}
+ul{
+    list-style: none;
+    padding-top: -1px;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo{}
+header nav .logo{}
+header nav .logo h1{
+    font-size: 36px;
+    text-shadow: 1px 2px 4px #40b27a;
+}
+header nav .menu{
+    display: flex;
+    align-items: center;
+}
+header nav .menu li{
+    margin-left: 20px;
+}
+header nav .menu li a{
+    font-size: 20px;
+    display: inline-block;
+}
+
+header .hero{
+    display: flex;
+    flex-basis: 50%;
+}
+header .hero .left{
+    flex-basis: 50%;
+    display: flex;
+    /* justify-content: center; */
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 166px;
+}
+header .hero .left h1{
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+header .hero .left h3{
+    font-size: 26px;
+    line-height: 1.2;
+}
+header .hero .left a{
+    background: #03130b;
+    color: rgb(255, 251, 251);
+    padding: 5px 10px;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 700;
+    position: relative;
+    transform: scale(1.2);
+    z-index: 2;
+}
+header .hero .left a::before{
+    content: " ";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2ce689;
+    z-index: -1;
+}
+header .hero .left a:hover::before{
+    width: 100%;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+
+header .hero .left a i{
+    margin-right: 15px;
+    color: #fefefe;
+}
+header .hero .right{
+    flex-basis: 50%;
+}
+header .hero .right img{
+    margin: 100px 0 100px 100px;
+}
+header input{
+    position: absolute;
+    display: none;
+}
+header label{
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    z-index: 4;
+}
+header label .fas{
+    cursor: pointer;
+}
+header .sidemenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .sidemenu{
+    background: rgb(0 5 3 / 86%);
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: absolute;
+    left: -40vw;
+    z-index: 3;
+    
+}
+header .sidemenu .logo{align-self: end;
+}
+header .sidemenu .logo h1{
+    margin: 20px;
+}
+header .sidemenu ul{
+    margin-top: 50px;
+}
+header .sidemenu ul li{
+    padding: 20px;
+}
+header .sidemenu ul li a{
+    font-size: 24px;
+}
+header .sidemenu ul li .btn1{
+    margin-top: 100px;
+}
+
+header #toggoler:checked ~ .sidemenu{
+    left: 0vw;
+    transition: 0.5s;
+}
+header label .close{
+    display: none;
+}
+header #toggoler:checked ~ label .open{
+    display: none;
+} 
+header #toggoler:checked ~ label .close{
+    display: block;
+}
+
+
+/* media qqqq */
+/* media qqqq */
+/* media qqqq */
+@media (max-width:940px){
+    header nav .menu {
+        display: none;
+    }
+    .hero {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+    header .hero .right img {
+        margin: auto;
+        width: 40vw;
+    }
+    header .hero .left{
+        margin: auto;
+        padding: 0;
+    }
+    header .hero .right{
+        align-self: center;
+        flex-basis: 100%;
+    }
+    header label {
+        position: absolute;
+        top: 2%;
+        left: 94%;
+        
+    }
+    header .sidemenu {
+        background: rgb(0 5 3 / 86%);
+        height: 100vh;
+        width: 100vw;
+        left: -100vw;
+    }
+    *{
+        font-size: 110% !important;
+    }
+}
+ul li a{
+    position: relative;
+}
+ul li a::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: #5df3a8;
+    position: absolute;
+    top: 100%;
+    left: -5%;
+}
+ul li a:hover::before{
+    width: 110%;
+    transition: 0.5s;
+}
